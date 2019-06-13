@@ -2145,3 +2145,13 @@ grafana:
       annotations:
         fabric8.io/expose: "true"
         fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
+
+heapster:
+  image:
+    repository: googlecontainer/heapster
+    tag: v1.5.2
+  resizer:
+    image:
+      repository: googlecontainer/addon-resizer
+      tag: 1.7
+
