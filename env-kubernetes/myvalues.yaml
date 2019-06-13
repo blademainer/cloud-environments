@@ -1,6 +1,6 @@
 # Override configuration from https://github.com/jenkins-x/jenkins-x-platform/blob/master/jenkins-x-platform/values.yaml
 # to specify the docker registry when not using Jenkins
-dockerRegistry: ""
+dockerRegistry: "docker.io"
 
 JXBasicAuth: admin:$apr1$a/HdTrV7$XYCGJWF9PdVwVVTvjMyaU/
 
@@ -877,10 +877,7 @@ jenkins:
     Overwrite:
       Plugins: true
       Config: true
-  Servers:
-    Global:
-      EnvVars:
-        DOCKER_REGISTRY: "docker.io"
+
 
   Servers:
     BitbucketCloud:
@@ -911,7 +908,7 @@ jenkins:
     # global node properties
     Global:
       EnvVars:
-        DOCKER_REGISTRY: ""
+        DOCKER_REGISTRY: "docker.io"
         TILLER_NAMESPACE: ""
 
   Agent:
